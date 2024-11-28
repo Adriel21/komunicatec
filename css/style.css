@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+nav{
+    width: 60%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: 'inter';
+    color: #000;
+    font-size: 24px;
+}
+
+
+
+.botao-entrar{
+    background-color: #1F496B;
+    border-radius: 8px;
+    width: 160px;
+    text-align: center;
+    padding: 15px;
+}
+
+.botao-entrar:hover{
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 160px;
+    text-align: center;
+    background-color: white;
+}
+
+
+
+.botao-cadastrar{
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 160px;
+    text-align: center;
+    padding: 15px;
+}
+
+.botao-cadastrar:hover{
+    background-color: #1F496B;
+}
+
+.botao-entrar a{
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.botao-entrar a:hover{
+    color: #1F496B;
+    font-weight: bold;
+}
+
+.botao-cadastrar a{
+    color: #1F496B;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.botao-cadastrar a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.mobile_menu{
+    display: none;
+}
+
+@media screen and (max-width: 950px) {
+    .logo{
+        width: 250px;
+    }
+
+    nav{
+        width: 80px;
+    }
+
+    nav ul{
+        display: none; 
+    }
+
+    nav ul li a{
+        color: black;
+    }
+
+    .menu_hamburguer span {
+        height: 3px;
+        width: 45px;
+        background-color:#1F496B;
+        display: block;
+        margin-bottom: 4px;
+        border-radius: 50px;
+        padding: 2px;
+      }
+    
+      .menu_hamburguer span:nth-child(2) {
+       
+        transform: scaleX(-1);
+        transform-origin: center; /* Define o ponto de origem para o centro do elemento */
+      }
+
+      .menu a {
+        /* color: black; */
+        font-weight: bold;
+        /* background-color: white; */
+        background-color: white;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 100px;
+      }
+      
+      /*Esta classe será MANIPULADA via JS*/
+      .menu-aberto{
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+        z-index: 9998;
+        margin-top: 25px;
+      }
+
+      #span-menuOne {
+        animation: rotateAnimationOne 0.1s linear forwards;
+        transform: translateZ(0);
+      
+      }
+      
+      @keyframes rotateAnimationOne {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-40deg);
+        }
+      }
+      
+       #span-menuTwo {
+        display: none;
+       }
+      
+      
+      #span-menuThree {
+        animation: rotateAnimationThree 0.1s linear forwards;
+        transform: translateZ(0);
+      
+      }
+      
+      @keyframes rotateAnimationThree {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(30deg);
+        }
+
+    }
+
+    .mobile_menu{
+        display: block;
+    }
+
+    .botao-entrar, .botao-cadastrar{
+        display: none;
+    }
+}
+
+
+
+/* Fim cabeçalho */
+
+.banner{
+    background-image: url(../img/home/fatec_banner.png);
+    height: 532px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.conteudo-banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsl(207, 55%, 27%, 0.7);
+    font-family: 'Poppins';
+    padding-left: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.conteudo-banner button{
+    width: 300px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    color: #1F496B;
+    font-weight: bold;
+    font-size: clamp(20px, 2vw, 20px);
+    margin-top: 30px;
+}
+
+.conteudo-banner h1{
+    font-size: clamp(25px, 3vw, 50px);
+}
+
+.barrinha-vertical{
+    display: block;
+    height: 60px;
+    width: 2px;
+    background-color: white;
+    color: white;
+}
+
+.conteudo-banner p{
+    font-size: clamp(19px, 2vw, 24px);
+}
+
+
+
+@media screen and (max-width: 950px){
+    .conteudo-banner{
+        padding-left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .conteudo-banner button{
+        width: 200px;
+        height: 60px;
+        border-radius: 8px;
+        border: none;
+        color: #1F496B;
+        font-weight: bold;
+        font-size: clamp(16px, 2vw, 18px);
+        margin-top: 30px;
+    }
+
+    .conteudo-banner p{
+        margin-top: 60px;
+    }
+    
+    
+}
+
+
+
+/* main */
+
+
+
+.principal{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Poppins';
+}
+
+.principal h2{
+    font-size: clamp(28px, 3vw, 40px);
+}
+
+.conteudo-principal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo-principal p{
+    max-width: 60%;
+    font-size: clamp(20px, 3vw, 26px);
+    overflow-wrap: break-word;  
+
+    word-wrap: break-word; 
+
+    word-break: break-word;
+    
+}
+
+.conteudo-principal img{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+
+    .principal{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .conteudo-principal{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo-principal p{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .principal h2{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+/* Footer */
+footer{
+    background-color: #1F496B;
+    margin-top: 60px;
+    text-align: center;
+    padding: 15px;
+}
