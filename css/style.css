@@ -10,11 +10,15 @@ header{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
 }
 
 
 nav{
-    width: 60%;
+    width: 45%;
 }
 
 nav ul{
@@ -36,15 +40,13 @@ nav a{
 .botao-entrar{
     background-color: #1F496B;
     border-radius: 8px;
-    width: 160px;
+    width: 120px;
     text-align: center;
-    padding: 15px;
+    padding: 12px;
 }
 
 .botao-entrar:hover{
     border-radius: 8px;
-    border: solid 1px black;
-    width: 160px;
     text-align: center;
     background-color: white;
 }
@@ -53,10 +55,10 @@ nav a{
 
 .botao-cadastrar{
     border-radius: 8px;
-    border: solid 1px black;
-    width: 160px;
+    border: 1px solid black;
+    width: 120px;
     text-align: center;
-    padding: 15px;
+    padding: 12px;
 }
 
 .botao-cadastrar:hover{
@@ -66,7 +68,6 @@ nav a{
 .botao-entrar a{
     color: white;
     font-weight: bold;
-    padding: 30px;
 }
 
 .botao-entrar a:hover{
@@ -77,7 +78,6 @@ nav a{
 .botao-cadastrar a{
     color: #1F496B;
     font-weight: bold;
-    padding: 15px;
 }
 
 .botao-cadastrar a:hover{
@@ -343,3 +343,6 @@ footer{
     text-align: center;
     padding: 15px;
 }
+
+/* Fim do footer */
+
